@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="(2023.09.07) C++ 입출력.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
