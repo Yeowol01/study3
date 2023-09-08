@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="(2023.09.07) C++ 입출력.h">
+    <ClInclude Include="%282023.09.07%29 참조자.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
