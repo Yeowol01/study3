@@ -23,5 +23,11 @@
     <ClInclude Include="%282023.09.07%29 참조자.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="(2023.09.08) 이름 공간.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="(2023.09.11) 클래스.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

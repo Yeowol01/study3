@@ -131,6 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="%282023.09.07%29 참조자.h" />
+    <ClInclude Include="(2023.09.08) 이름 공간.h" />
+    <ClInclude Include="(2023.09.11) 클래스.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

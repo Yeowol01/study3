@@ -1,117 +1,93 @@
 ﻿#include <iostream>
 using namespace std;
 
-int data = 25;
+#pragma region 클래스
+	// 사용자 정의 데이터 유형으로 속성과 함수가 포함되어 있으며, 클래스를 통해 객체를 생성하여 접근하고 사용할 수 있는 집합체입니다.
 
-namespace A
+class GameObject
 {
-	void Attack()
+	// 접근 지정자
+	// 클래스 내부의 포함되어 있는 속성에 접근 범위를 제한하는 지정자입니다.
+
+	// public
+	// 클래스 내부와 자기가 상속하고 있는 클래스 그리고 클래스 외부에서 접근을 허용하는 지정자입니다.
+
+	// protected
+	// 클래스 내부와 자기가 상속하고 있는 클래스까지만, 접근을 허용하는 지정자입니다.
+
+	// private
+	// 클래스 내부에서만 접근을 허용하는 지정자입니다.
+	
+	// 기본 접근 지정자 (private)
+	
+
+//public :
+//	float x;
+//
+//	void SendMessage()
+//	{
+//		cout << "메세지" << endl;
+//	}
+//protected :
+//	float y;
+//
+//private :
+//	double z;
+};
+
+#pragma endregion
+
+#pragma region 생성자와 소멸자
+	// <생성자>
+	// 클래스의 인스턴스가 생성되는 시점에 자동으로 호출되는 특수한 멤버 함수입니다.
+
+	class Monster
 	{
-		cout << "A 개발자 Attack( )" << endl;
-	}
-}
+	public :
+		Monster()
+		{
+			cout << "Monster 생성" << endl;
+		}
 
-namespace B
-{
-	void Attack()
-	{
-		cout << "B 개발자 Attack( )" << endl;
-	}
-}
+		// 생성자의 경우 객체가 생성될 때 단 한 번만 호출되며, 생성자는 반환형이 존재하지 않기 때문에 생성자가 호출되기 전에는 객체에 대한 메모리는 할당하지 않습니다.
 
-void Damage(int hp = 100)
-{
-	hp -= 25;
-	cout << "hp의 값 : " << hp << endl;
-}
+		// <소멸자>
+		// 객체가 소멸될 때 자동으로 실행되는 클래스의 멤버 함수입니다.
+		~Monster()
+		{
+			cout << "Monster 소멸" << endl;
+		}
 
-// 기본 매개변수는 오른쪽에서 부터 정의해야 합니다.
-void Move(int x, int y, int z = 10)
-{
-	cout << "x의 값 : " << x << endl;
-	cout << "y의 값 : " << y << endl;
-	cout << "z의 값 : " << z << endl;
-}
+		// 소멸자는 객체가 메모리에서 해제될 때 단 한 번만 호출되며, 소멸자에게는 매개변수를 생성하여 사용할 수 없습니다.
+	};
 
-int max(int a, int b)
-{
-	int n;
+#pragma endregion
 
-	while (b != 0)
-	{
-		n = a % b;
-		a = b;
-		b = n;
-	}
-	return a;
-}
 
-int min(int a, int b)
-{
-	return a * b / max(a, b);
-}
 
 int main()
 {
-#pragma region 범위 지정 연산자
-	// 여러 범위에서 사용되는 식별자를 구분하는데 사용하는 연산자입니다.
+#pragma region 클래스
+	/*GameObject gameObject1;
+	GameObject gameObject2;
 
-	//int data = 100;
+	cout << sizeof(gameObject1) << endl;
 
-	//cout << "data의 값 : " << data << endl;
-	//cout << "data의 값 : " << ::data << endl;
+	gameObject1.SendMessage();
+	gameObject2.SendMessage();
 
-	// 범위 지정 연산자는 전역 변수와 같은 름의 지역 변수가 선언되었을 때 가장 가까운 범위에 선언된 변수의 이름을 사용하는 범위 규칙이 존재하기 때문에 전역 변수가 호출되지 않습니다.
-
+	gameObject1.x = 100;*/
 #pragma endregion
 
-#pragma region 이름 공간
-	// 속성을 구분할 수 있도록 유효 범위를 설정하는 영역입니다.
+#pragma region 생성자와 소멸자
 
-	/*A::Attack();
-	B::Attack();*/
+	Monster monster;
 
-#pragma endregion
+	// 8 byte
+	// [    ]
+	Monster* ptr = new Monster;
 
-#pragma region 기본 매개변수
-	// 함수의 매개변수에 값이 전달되지 않았을 때 기본 값으로 설정되는 매개변수입니다.
-
-	/*int hp = 100;
-
-	Damage();
-	Move(5, 10);*/
-
-	// 기본 매개변수가 있는 위치에 다시 새로운 인수를 넣어줄 수 있습니다.
-	/*Move(5, 10, 25);*/
-
-#pragma endregion
-
-#pragma region 최소 공배수
-
-	int a, b;
-
-	cin >> a >> b;
-
-	cout << "최소공배수 : " << min(a, b);
-
-	// 강사님 방법
-	int x = 0;
-	int y = 0;
-	int count = 1;
-	cin >> x >> y;
-	for (int i = 2; i <= y; i++)
-	{
-		if (x % i == 0 && y % i == 0)
-		{
-			count *= i;
-			x /= i;
-			y /= i;
-
-			i--;
-		}
-	}
-
-	cout << count * x * y << endl;
+	delete ptr;
 
 #pragma endregion
 
