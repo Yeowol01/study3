@@ -1,5 +1,7 @@
 #pragma once
 #include "Mechanic.h"
+#include "Tank.h"
+#include "Goliath.h"
 
 class Vulture : public Mechanic
 {
@@ -12,8 +14,9 @@ public :
 	void Move();
 
 	virtual void Attack() override;
-
+	virtual void Create() override;
 	// 함수의 오버라이드는 상속 관계에서만 이루어지며, 하위 클래스에서 함수를 재정의할 때 상위 클래스의 함수 형태와 일치해야 합니다.
+	~Vulture();
 #pragma endregion
 
 };

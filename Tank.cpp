@@ -1,0 +1,27 @@
+#include "Tank.h"
+
+Tank::Tank()
+{
+	helath = 150;
+	attack = 30;
+}
+
+void Tank::Move()
+{
+	cout << "ÅÊÅ© ÀÌµ¿" << endl;
+}
+
+void Tank::Attack()
+{
+	cout << "ÅÊÅ© °ø°Ý" << endl;
+}
+
+void Tank::Create()
+{
+	cout << "ÅÊÅ© »ý¼º" << endl;
+}
+
+Tank::~Tank()
+{
+	cout << "ÅÊÅ© »èÁ¦" << endl;
+}
