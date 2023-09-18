@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Mechanic">
+      <UniqueIdentifier>{e22412eb-f821-40ef-b564-d308fe82da6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Solution.cpp">
@@ -22,15 +25,24 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Mechanic.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Vulture.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Tank.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Mechanic</Filter>
     </ClCompile>
     <ClCompile Include="Goliath.cpp">
+      <Filter>소스 파일\Mechanic</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>소스 파일\Mechanic</Filter>
+    </ClCompile>
+    <ClCompile Include="Vulture.cpp">
+      <Filter>소스 파일\Mechanic</Filter>
+    </ClCompile>
+    <ClCompile Include="Marine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Firebat.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Medic.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +60,18 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Goliath.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Marine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Firebat.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Medic.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
