@@ -1,5 +1,11 @@
 #include "Medic.h"
 
+Medic::Medic()
+{
+	health = 60;
+	maxHP = health;
+}
+
 int Medic::GetHP()
 {
 	return health;
@@ -11,9 +17,14 @@ void Medic::Skill()
     cout << "광학 섬광탄" << endl;
 }
 
+void Medic::RecoveryHP()
+{
+	health = maxHP;
+}
+
 void Medic::SetHP(int value)
 {
-	if (value >= 0 && value <= 100)
+	if (value >= 0 && value <= maxHP)
 	{
 		health = value;
 	}
@@ -21,9 +32,4 @@ void Medic::SetHP(int value)
 	{
 		cout << "잘못된 값이 들어왔습니다." << endl;
 	}
-}
-
-void Medic::Recovery()
-{
-	cout << "체력을 회복하였습니다" << endl;
 }

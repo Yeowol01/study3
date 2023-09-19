@@ -1,5 +1,3 @@
-﻿  Marine.cpp
-  Solution.cpp
-  Unit.cpp
-  코드를 생성하고 있습니다...
+﻿  Solution.cpp
+C:\Users\yeowo\Desktop\study3\study3\Solution.cpp(41): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
   Solution.vcxproj -> C:\Users\yeowo\Desktop\study3\study3\x64\Debug\Solution.exe

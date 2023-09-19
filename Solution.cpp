@@ -1,74 +1,59 @@
 ﻿#include <iostream>
-#include "Marine.h"
-#include "Firebat.h"
-#include "Medic.h"
 
 using namespace std;
 
-#pragma region 함수의 오버로딩
-	// 같은 이름의 함수를 매개 변수의 자료형과 매개 변수의 수로 구분하여 여러 개의 선언할 수 있는 기능입니다.
-
-void Calculator(char x, char y)
+class Animal
 {
-	cout << "x + y : " << x + y << endl;
-}
+private : 
+	char blood;		// 1 byte
+	int age;		// 4 byte
+	float height;	// 4 byte
+	
+public : 
+	Animal(int m_age, float m_height) : age(m_age), height(m_height)
+	{
+		cout << "age : " << age << endl;
+		cout << "height : " << height << endl;
+	}
 
-void Calculator(int x, int y)
-{
-	cout << "x + y : " << x + y << endl;
-}
+#pragma region this 포인터
+	// 객체 자기 자신을 가리키는 포인터입니다.
 
-void Calculator(float x, float y)
-{
-	cout << "x + y : " << x + y << endl;
-}
+	//            'A'        5          3.25f
+	Animal( char blood, int age, float height )
+	{
+		this->blood = blood;
+		this->age = age;
+		this->height = height;
 
-// 함수의 오버로딩의 경우 함수의 매개 변수에 전달하는 인수의 형태를 보고 호출하므로, 반환형으로 함수의 오버로딩은 생성할 수 없습니다.
-//int Calculator(float x, float y)
-//{
-//
-//}
+		cout << "객체의 주소 : " << this << endl;
+	}
 #pragma endregion
 
+
+	
+
+};
+
+int* Value()
+{
+	int data = 10;
+	return &data;
+}
 
 int main()
 {
-#pragma region 함수의 오버로딩
-	//Calculator('A', 'B');
-	//Calculator(10, 20);
-	//Calculator(5.75f, 6.25f);
-#pragma endregion
+	// Animal animal( 'A', 3, 3.25f );
 
-#pragma region 순수 가상 함수
-	// 함수를 선언만 할 수 있으며, 해당 클래스에서 구현을 할 수 없고, 상속받은 하위 클래스에서 반드시 재정의를 해야하는 멤버 함수입니다.
+	int a[5] = { 1,2,3,4,5 };
 
-	Unit* unitPtr = new Marine;
+	int* ptr = Value();
 
-	unitPtr->SetHP(40);
-	unitPtr->Skill();
+	cout << *ptr << endl;
 
-	Recovery(Marine);
+	*ptr = 300;
 
-	cout << unitPtr->GetHP() << endl;
-
-	Unit* unitPtr = new Firebat;
-
-	unitPtr->SetHP(50);
-	unitPtr->Skill();
-
-	Recovery(Firebat);
-
-	cout << unitPtr->GetHP() << endl;
-
-	Unit* unitPtr = new Medic;
-
-	unitPtr->SetHP(60);
-	unitPtr->Skill();
-
-	Recovery(Medic);
-
-	cout << unitPtr->GetHP() << endl;
-#pragma endregion
+	cout << *ptr << endl;
 
 	return 0;
 }
