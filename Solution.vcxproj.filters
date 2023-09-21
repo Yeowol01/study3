@@ -57,6 +57,9 @@
     <ClCompile Include="Medic.cpp">
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="Unit.h">
       <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
