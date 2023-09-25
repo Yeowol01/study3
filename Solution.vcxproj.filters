@@ -31,12 +31,15 @@
     <Filter Include="소스 파일\Computer">
       <UniqueIdentifier>{6ae170d4-17e6-4131-a770-af008863b310}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\etc">
+      <UniqueIdentifier>{bf7320aa-401b-4e30-8850-9c50c90429ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\etc">
+      <UniqueIdentifier>{6e6c52ba-72df-4f18-98c0-b52cfaaef1c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Solution.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Mechanic.cpp">
@@ -63,9 +66,6 @@
     <ClCompile Include="Medic.cpp">
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Keyboard.cpp">
       <Filter>소스 파일\Computer</Filter>
     </ClCompile>
@@ -79,16 +79,25 @@
       <Filter>소스 파일\Computer</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일\etc</Filter>
     </ClCompile>
     <ClCompile Include="Bank.cpp">
+      <Filter>소스 파일\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Firebat.h">
       <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
@@ -116,9 +125,6 @@
     <ClInclude Include="Unit.h">
       <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>헤더 파일\Computer</Filter>
     </ClInclude>
@@ -131,10 +137,22 @@
     <ClInclude Include="Keyboard.h">
       <Filter>헤더 파일\Computer</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="LinkedList.h">
+      <Filter>헤더 파일\etc</Filter>
     </ClInclude>
     <ClInclude Include="Bank.h">
+      <Filter>헤더 파일\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>헤더 파일\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>헤더 파일\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
