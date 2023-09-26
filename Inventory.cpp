@@ -1,7 +1,10 @@
-#include "Inventory.h"
+﻿#include "Inventory.h"
 
 Inventory::Inventory( int x, int y )
 {
+	lineX = x;
+	selectIndex = 0;	
+
 	size = x * y;
 	items = new Item[size];
 
@@ -11,18 +14,47 @@ Inventory::Inventory( int x, int y )
 	}
 }
 
+void Inventory::AddItem()
+{
+	for ( int i = 0; i < size; i++ )
+	{
+		if ( items[i].GetCheck() == false )
+		{
+			items[i].SetCheck( true );
+			break;
+		}
+
+		if ( i == size - 1 )
+		{
+			if ( items[size - 1].GetCheck() == true )
+			{
+				cout << "인벤토리가 가득 찼습니다" << endl;
+			}
+		}
+	}
+}
+
 void Inventory::Renderer()
 {
 	for ( int i = 0; i < size; i++ )
 	{
 		if ( i % 5 == 0 && i != 0 )
 		{
-			std::cout << std::endl;
+			cout << endl;
 		}
 
 		if ( items[i].GetCheck() == false )
 		{
-			std::cout << "?";
+			cout << "□";
+		}
+		else if( items[i].GetCheck() == true )
+		{
+			cout << "■";
 		}
 	}
+}
+
+void Inventory::SelectNumber()
+{
+	
 }
