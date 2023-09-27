@@ -37,6 +37,12 @@
     <Filter Include="헤더 파일\etc">
       <UniqueIdentifier>{6e6c52ba-72df-4f18-98c0-b52cfaaef1c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Inventory">
+      <UniqueIdentifier>{a5538f8c-665f-4690-b382-d89f68a8e63a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Inventory">
+      <UniqueIdentifier>{50fa0089-9415-49e4-bc3a-98c275832363}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Solution.cpp">
@@ -90,14 +96,14 @@
     <ClCompile Include="Camera.cpp">
       <Filter>소스 파일\etc</Filter>
     </ClCompile>
+    <ClCompile Include="InputKey.cpp">
+      <Filter>소스 파일\Inventory</Filter>
+    </ClCompile>
     <ClCompile Include="Inventory.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="InputKey.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,14 +158,14 @@
     <ClInclude Include="Camera.h">
       <Filter>헤더 파일\etc</Filter>
     </ClInclude>
+    <ClInclude Include="InputKey.h">
+      <Filter>헤더 파일\Inventory</Filter>
+    </ClInclude>
     <ClInclude Include="Inventory.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="InputKey.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,12 +14,25 @@ Inventory::Inventory( int x, int y )
 	}
 }
 
+void Inventory::ShowItem()
+{
+	if ( items[selectIndex].GetCheck() != false )
+	{
+		items[selectIndex].Information();
+	}
+	else
+	{
+		cout << "Item이 존재하지 않습니다." << endl;
+	}
+}
+
 void Inventory::AddItem()
 {
 	for ( int i = 0; i < size; i++ )
 	{
 		if ( items[i].GetCheck() == false )
 		{
+			items[i].SetItem( 100, "Potion" );
 			items[i].SetCheck( true );
 			break;
 		}
@@ -54,7 +67,15 @@ void Inventory::Renderer()
 	}
 }
 
-void Inventory::SelectNumber()
+void Inventory::SelectNumber( InputKey inputKey )
 {
-	
+	// inputKey.GetX() (0) / 2
+
+	// [0] [1]
+	int resultX = inputKey.GetX() / 2;
+
+	// inputKey.GetY() (1) * 5
+	int resultY = inputKey.GetY() * lineX;
+
+	selectIndex = resultX + resultY;
 }
